@@ -120,6 +120,7 @@ body {
   transition: all 1s ease;
   z-index: 5;
   text-align: center;
+  pointer-events: auto;
 }
 
 #love-note.show {
