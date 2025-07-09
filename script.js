@@ -3,10 +3,13 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 const music = document.getElementById("bg-music");
 const loveNote = document.getElementById("love-note");
-
 let width = canvas.width = window.innerWidth;
 let height = canvas.height = window.innerHeight;
 
+window.addEventListener("touchstart", () => {
+    loveNote.classList.add("show");
+    });
+    
 window.addEventListener("resize", () => {
   width = canvas.width = window.innerWidth;
   height = canvas.height = window.innerHeight;
@@ -121,9 +124,6 @@ function showLoveNote() {
   if (loveNote) {
     loveNote.classList.add("show");
     setTimeout(() => loveNote.classList.remove("show"), 5000);
-    window.addEventListener("touchstart", () => {
-    loveNote.classList.add("show");
-    });
   }
 }
 
