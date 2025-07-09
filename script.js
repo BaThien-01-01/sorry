@@ -121,6 +121,9 @@ function showLoveNote() {
   if (loveNote) {
     loveNote.classList.add("show");
     setTimeout(() => loveNote.classList.remove("show"), 5000);
+    window.addEventListener("touchstart", () => {
+    loveNote.classList.add("show");
+    });
   }
 }
 
